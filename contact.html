@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Lochana & Techno Mile Store | Customer Support & eBay Inquiries</title>
+  <meta name="description" content="Get in touch with Lochana at Techno Mile Store. Phone: +94719215916, Email: djcj7.lochana@gmail.com, Address: No 107/03 Bodiraja Mawatha Katugasthota 20800.">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            ebay: {
+              red: '#e53238',
+              blue: '#0064d2',
+              yellow: '#f5af02',
+              green: '#86b817'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-400 font-semibold px-2 py-0.5 rounded-full text-[11px]">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> 24/7 Direct Inquiries
+        </span>
+        <span class="text-slate-300 hidden md:inline">Have a question about an item on our eBay storefront? Reach out anytime!</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300">
+        <a href="tel:+94719215916" class="hover:text-white transition flex items-center gap-1.5 font-bold text-amber-400">
+          <i class="fa-solid fa-phone text-[10px]"></i> +94 71 921 5916
+        </a>
+        <span class="text-slate-600">|</span>
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-white font-medium">
+            <i class="fa-solid fa-globe text-slate-400"></i>
+            <span class="current-currency-label">AUD</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-slate-400"></i>
+          </button>
+          <div class="absolute right-0 mt-1 w-28 bg-white text-slate-800 rounded-xl shadow-xl py-1 hidden group-hover:block z-50 border border-slate-200">
+            <button onclick="setCurrency('AUD')" class="w-full text-left px-3 py-1.5 text-xs hover:bg-blue-50 font-medium flex items-center justify-between">
+              <span>AU$ (AUD)</span>
+            </button>
+            <button onclick="setCurrency('USD')" class="w-full text-left px-3 py-1.5 text-xs hover:bg-blue-50 font-medium flex items-center justify-between">
+              <span>$ (USD)</span>
+            </button>
+            <button onclick="setCurrency('LKR')" class="w-full text-left px-3 py-1.5 text-xs hover:bg-blue-50 font-medium flex items-center justify-between">
+              <span>Rs. (LKR)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-700 flex items-center justify-center text-white shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-store text-xl"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900">Techno<span class="text-blue-600">Mile</span></span>
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded border border-amber-300/50">Store</span>
+            </div>
+            <p class="text-[10px] font-medium text-slate-500 tracking-wide flex items-center gap-1">
+              <span class="text-[#e53238] font-black">e</span><span class="text-[#0064d2] font-black">b</span><span class="text-[#f5af02] font-black">a</span><span class="text-[#86b817] font-black">y</span> Verified Seller
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-semibold text-slate-700 hover:text-blue-600 transition">Home</a>
+          <a href="products.html" class="text-sm font-semibold text-slate-700 hover:text-blue-600 transition">Shop All Items</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-700 hover:text-blue-600 transition">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-blue-600 hover:text-blue-700 transition">Contact & Owner</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="flex items-center gap-3">
+          <button onclick="openWishlistDrawer()" class="relative p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition" title="Wishlist">
+            <i class="fa-regular fa-heart text-lg"></i>
+            <span class="wishlist-count-badge hidden absolute -top-1.5 -right-1.5 bg-rose-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          </button>
+
+          <button onclick="openCartDrawer()" class="relative p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition" title="Inquiry Cart">
+            <i class="fa-solid fa-cart-shopping text-lg"></i>
+            <span class="cart-count-badge hidden absolute -top-1.5 -right-1.5 bg-blue-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          </button>
+
+          <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-slate-900 to-slate-800 hover:from-black hover:to-slate-900 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-md transition transform hover:-translate-y-0.5 border border-slate-700">
+            <i class="fa-brands fa-ebay text-xl text-amber-400"></i>
+            <span>eBay Store</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
+          </a>
+
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-xl">
+      <a href="index.html" class="block py-2 text-sm font-semibold text-slate-700 hover:text-blue-600">Home</a>
+      <a href="products.html" class="block py-2 text-sm font-semibold text-slate-700 hover:text-blue-600">Shop All Items</a>
+      <a href="about.html" class="block py-2 text-sm font-semibold text-slate-700 hover:text-blue-600">About Us</a>
+      <a href="contact.html" class="block py-2 text-sm font-semibold text-blue-600">Contact & Owner</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-slate-900 text-white text-sm font-bold py-2.5 rounded-xl">
+          <i class="fa-brands fa-ebay text-xl text-amber-400"></i>
+          <span>Visit Official eBay Profile</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= CONTACT HERO ================= -->
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3.5 py-1.5 rounded-full text-xs font-bold border border-blue-200">
+          <i class="fa-solid fa-envelope-open-text text-blue-600"></i> We're Here To Help
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 tracking-tight">
+          Contact Techno Mile Store & Owner
+        </h1>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Need details about an item, custom order requests, bulk inquiries, or tracking updates on your eBay parcel? Reach out directly through any of our channels below.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAIN CONTACT SECTION ================= -->
+  <main class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 w-full space-y-12">
+    
+    <!-- Top Grid: Founder Card & Direct Contact Channels -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Left Column: Owner Profile & Official Credentials (5 cols) -->
+      <div class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 space-y-6">
+        
+        <!-- Owner Photo & Title -->
+        <div class="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-slate-100">
+          <div class="relative shrink-0">
+            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shadow-xl border-4 border-white ring-4 ring-blue-500/20">
+              <img src="assets/images/owner.jpg" alt="Lochana - Owner & Founder" class="w-full h-full object-cover">
+            </div>
+            <span class="absolute bottom-1 right-1 bg-emerald-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full border border-white flex items-center gap-1 shadow">
+              <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Verified
+            </span>
+          </div>
+
+          <div class="text-center sm:text-left space-y-1">
+            <span class="text-[10px] font-extrabold uppercase tracking-widest text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Store Owner</span>
+            <h2 class="font-heading font-extrabold text-2xl text-slate-900">Lochana</h2>
+            <p class="text-xs font-semibold text-slate-600">Techno Mile Store (eBay: technomilestore)</p>
+            <p class="text-xs text-slate-400 flex items-center justify-center sm:justify-start gap-1 mt-1">
+              <i class="fa-solid fa-location-dot text-rose-500"></i> Katugastota, Sri Lanka
+            </p>
+          </div>
+        </div>
+
+        <!-- Official Contact Details List -->
+        <div class="space-y-4">
+          
+          <!-- Phone Card -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-blue-300 transition flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-base shrink-0">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[11px] font-semibold text-slate-400 block uppercase tracking-wider">Direct Phone Number</span>
+              <a href="tel:+94719215916" class="text-sm font-extrabold text-slate-900 hover:text-blue-600 transition block mt-0.5">
+                +94 71 921 5916
+              </a>
+              <div class="flex items-center gap-2 mt-2">
+                <a href="tel:+94719215916" class="text-[11px] font-bold bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-lg transition inline-flex items-center gap-1">
+                  <i class="fa-solid fa-phone-volume text-[10px]"></i> Call Now
+                </a>
+                <a href="https://wa.me/94719215916?text=Hello%20Lochana,%20I'm%20reaching%20out%20via%20your%20Techno%20Mile%20Store%20website." target="_blank" rel="noopener noreferrer" class="text-[11px] font-bold bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 rounded-lg transition inline-flex items-center gap-1">
+                  <i class="fa-brands fa-whatsapp text-xs"></i> WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Card -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-indigo-300 transition flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-base shrink-0">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[11px] font-semibold text-slate-400 block uppercase tracking-wider">Official Email Address</span>
+              <a href="mailto:djcj7.lochana@gmail.com" class="text-sm font-extrabold text-slate-900 hover:text-indigo-600 transition block mt-0.5 break-all">
+                djcj7.lochana@gmail.com
+              </a>
+              <div class="mt-2">
+                <a href="mailto:djcj7.lochana@gmail.com?subject=Inquiry%20regarding%20Techno%20Mile%20Store%20Listing" class="text-[11px] font-bold bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded-lg transition inline-flex items-center gap-1">
+                  <i class="fa-solid fa-paper-plane text-[10px]"></i> Send Email
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Physical Address Card -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-rose-300 transition flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-base shrink-0">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[11px] font-semibold text-slate-400 block uppercase tracking-wider">Registered Address</span>
+              <p class="text-xs font-bold text-slate-900 mt-0.5 leading-relaxed">
+                No 107/03 Bodiraja Mawatha, Katugasthota 20800, Central Province, Sri Lanka
+              </p>
+            </div>
+          </div>
+
+          <!-- Official eBay Profile Link Card -->
+          <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center font-black text-xl shrink-0">
+              <i class="fa-brands fa-ebay"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <span class="text-[11px] font-semibold text-amber-900 block uppercase tracking-wider">Official eBay Storefront</span>
+              <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="text-xs font-extrabold text-blue-700 hover:underline transition block mt-0.5 truncate">
+                https://www.ebay.com.au/usr/technomilestore
+              </a>
+              <span class="text-[10px] text-amber-800 font-medium block mt-1">100% Positive Feedback • Active Since 2012</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive Message / Inquiry Form (7 cols) -->
+      <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 shadow-md border border-slate-200 space-y-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Quick Contact Form</span>
+          <h2 class="text-2xl font-extrabold font-heading text-slate-900 mt-1">Send a Message or Item Inquiry</h2>
+          <p class="text-xs text-slate-500 mt-1">Fill out the form below and Lochana will respond via email or WhatsApp within a few hours.</p>
+        </div>
+
+        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Full Name -->
+            <div>
+              <label for="contact-name" class="block text-xs font-bold text-slate-700 mb-1.5">Your Full Name *</label>
+              <input type="text" id="contact-name" required placeholder="e.g. John Doe" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+
+            <!-- Email Address -->
+            <div>
+              <label for="contact-email" class="block text-xs font-bold text-slate-700 mb-1.5">Email Address *</label>
+              <input type="email" id="contact-email" required placeholder="e.g. john@example.com" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Phone / WhatsApp -->
+            <div>
+              <label for="contact-phone" class="block text-xs font-bold text-slate-700 mb-1.5">Phone / WhatsApp Number</label>
+              <input type="tel" id="contact-phone" placeholder="e.g. +61 400 000 000" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+            </div>
+
+            <!-- Inquiry Subject -->
+            <div>
+              <label for="contact-subject" class="block text-xs font-bold text-slate-700 mb-1.5">Inquiry Topic</label>
+              <select id="contact-subject" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition cursor-pointer">
+                <option value="Product Availability & Specs">Product Availability & Specs</option>
+                <option value="eBay Order Tracking & Shipping">eBay Order Tracking & Shipping</option>
+                <option value="Custom / Wholesale Order">Custom / Wholesale Order</option>
+                <option value="Payment & Return Question">Payment & Return Question</option>
+                <option value="General Question for Lochana">General Question for Lochana</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="contact-message" class="block text-xs font-bold text-slate-700 mb-1.5">Message / Item Name *</label>
+            <textarea id="contact-message" rows="5" required placeholder="Tell us which product you are inquiring about or any question you have..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"></textarea>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+            <button type="submit" class="w-full sm:w-auto flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3.5 px-6 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Send Message</span>
+            </button>
+
+            <button type="button" onclick="sendFormViaWhatsApp()" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-3.5 px-6 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>Send via WhatsApp</span>
+            </button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+
+    <!-- Location & Google Map Visual Card -->
+    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-rose-500">Store Headquarters</span>
+          <h3 class="font-heading font-extrabold text-xl text-slate-900 mt-1">Katugasthota, Sri Lanka</h3>
+          <p class="text-xs text-slate-500">No 107/03 Bodiraja Mawatha, Katugasthota 20800</p>
+        </div>
+
+        <a href="https://maps.google.com/?q=Katugastota,Sri+Lanka" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold px-4 py-2 rounded-xl transition">
+          <i class="fa-solid fa-location-arrow text-rose-500"></i>
+          <span>Open in Google Maps</span>
+        </a>
+      </div>
+
+      <!-- Styled Map Container -->
+      <div class="w-full h-72 sm:h-80 rounded-2xl overflow-hidden border border-slate-200 relative bg-slate-100">
+        <iframe 
+          title="Katugastota Location"
+          src="https://maps.google.com/maps?q=Katugastota,+Sri+Lanka&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+          class="w-full h-full border-0" 
+          loading="lazy" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Quick Frequently Asked Questions -->
+    <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-md border border-slate-200">
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Common Questions</span>
+        <h3 class="font-heading font-extrabold text-2xl text-slate-900 mt-1">Frequently Asked Questions</h3>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        
+        <details class="group p-4 bg-slate-50 rounded-2xl border border-slate-200 cursor-pointer">
+          <summary class="flex items-center justify-between font-heading font-bold text-sm text-slate-800 list-none">
+            <span>How do I purchase items displayed on this website?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+            You can either click the <strong>"Buy on eBay"</strong> button on any product to complete your order safely through our official eBay storefront, or click <strong>"WhatsApp Inquire"</strong> to place a personalized direct order with Lochana.
+          </p>
+        </details>
+
+        <details class="group p-4 bg-slate-50 rounded-2xl border border-slate-200 cursor-pointer">
+          <summary class="flex items-center justify-between font-heading font-bold text-sm text-slate-800 list-none">
+            <span>What are your shipping destinations and delivery times?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+            We ship to Australia, New Zealand, the United States, Europe, and worldwide. Standard international tracked shipping typically takes between 7 to 15 business days depending on destination customs clearance.
+          </p>
+        </details>
+
+        <details class="group p-4 bg-slate-50 rounded-2xl border border-slate-200 cursor-pointer">
+          <summary class="flex items-center justify-between font-heading font-bold text-sm text-slate-800 list-none">
+            <span>What payment methods are supported?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+            On eBay, all major credit/debit cards (Visa, MasterCard, Amex), PayPal, Apple Pay, and Google Pay are supported with 100% eBay Buyer Protection. For direct local inquiries in Sri Lanka, bank transfers and Cash on Delivery can be arranged via WhatsApp.
+          </p>
+        </details>
+
+        <details class="group p-4 bg-slate-50 rounded-2xl border border-slate-200 cursor-pointer">
+          <summary class="flex items-center justify-between font-heading font-bold text-sm text-slate-800 list-none">
+            <span>What is your return and refund policy?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+            We provide a 30-day money-back guarantee. If an item arrives damaged, defective, or does not match the description, contact us immediately and we will issue a replacement or full refund without hassle.
+          </p>
+        </details>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-900">
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold text-lg">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <span class="font-heading font-extrabold text-xl text-white">Techno<span class="text-blue-500">Mile</span> Store</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Your trusted global marketplace for curated women's bags, travel organizers, cosmetics storage, and everyday lifestyle gear.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-emerald-400 font-semibold">
+            <i class="fa-solid fa-circle-check"></i> 100% Positive eBay Feedback Seller
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">Quick Navigation</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-white transition">Home Page</a></li>
+            <li><a href="products.html" class="hover:text-white transition">All Products Catalog</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Store & Founder</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Details</a></li>
+            <li><a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">eBay Profile <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">Categories</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="products.html?category=fashion" class="hover:text-white transition">Women's Fashion & Handbags</a></li>
+            <li><a href="products.html?category=beauty" class="hover:text-white transition">Beauty & Makeup Storage</a></li>
+            <li><a href="products.html?category=car" class="hover:text-white transition">Car Backseat & Travel Gear</a></li>
+            <li><a href="products.html?category=tech" class="hover:text-white transition">Tech Gadgets & Home Living</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">Contact & Location</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-user text-blue-400 mt-0.5"></i>
+              <span>Owner: <strong>Lochana</strong></span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-phone text-emerald-400 mt-0.5"></i>
+              <a href="tel:+94719215916" class="hover:text-white transition">+94 71 921 5916</a>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-envelope text-indigo-400 mt-0.5"></i>
+              <a href="mailto:djcj7.lochana@gmail.com" class="hover:text-white transition break-all">djcj7.lochana@gmail.com</a>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-rose-400 mt-0.5"></i>
+              <span>No 107/03 Bodiraja Mawatha, Katugasthota 20800</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 Techno Mile Store. Curated by Lochana. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5"><i class="fa-brands fa-ebay text-lg text-slate-400"></i> eBay Storefront</span>
+          <span class="flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i> WhatsApp Support</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CART SLIDE-OUT DRAWER ================= -->
+  <div id="cart-drawer-backdrop" onclick="closeCartDrawer()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <h3 class="font-heading font-bold text-base text-slate-900">Your Inquiry Basket</h3>
+      </div>
+      <button onclick="closeCartDrawer()" class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200 transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5">
+      <div id="cart-drawer-items" class="space-y-3"></div>
+      <div id="cart-empty-state" class="hidden text-center py-12">
+        <div class="w-16 h-16 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto text-2xl mb-4">
+          <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+        <h4 class="font-heading font-bold text-slate-800 text-sm">Your basket is empty</h4>
+        <p class="text-xs text-slate-500 mt-1 max-w-xs mx-auto">Browse our collection and add items to checkout via eBay or message directly on WhatsApp.</p>
+      </div>
+    </div>
+    <div id="cart-drawer-footer" class="p-5 border-t border-slate-100 bg-slate-50 space-y-4">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-slate-600 font-medium">Estimated Subtotal:</span>
+        <span id="cart-subtotal" class="font-heading font-black text-lg text-slate-900">AU$ 0.00</span>
+      </div>
+      <div class="space-y-2">
+        <button onclick="checkoutViaWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-3.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Order / Inquire via WhatsApp</span>
+        </button>
+        <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-black text-white font-bold text-xs py-3 px-4 rounded-xl transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-ebay text-lg text-amber-400"></i>
+          <span>Checkout Directly on eBay</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= WISHLIST MODAL ================= -->
+  <div id="wishlist-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div onclick="closeWishlistModal()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+    <div class="relative bg-white rounded-3xl shadow-2xl max-w-lg w-full p-6 z-10 max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-heart text-rose-500 text-lg"></i>
+          <h3 class="font-heading font-bold text-base text-slate-900">Saved Wishlist Items</h3>
+        </div>
+        <button onclick="closeWishlistModal()" class="text-slate-400 hover:text-slate-700">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto py-4">
+        <div id="wishlist-items-container" class="space-y-3"></div>
+        <div id="wishlist-empty-state" class="hidden text-center py-10">
+          <i class="fa-regular fa-heart text-4xl text-slate-300 mb-3"></i>
+          <p class="text-xs text-slate-500 font-medium">You haven't saved any products to your wishlist yet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Handle Form Submit
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const subject = document.getElementById('contact-subject').value;
+      const message = document.getElementById('contact-message').value;
+
+      showToast(`Thank you ${name}! Your inquiry has been sent to Lochana.`, 'success');
+      document.getElementById('contact-form').reset();
+    }
+
+    // Send Form via WhatsApp Shortcut
+    function sendFormViaWhatsApp() {
+      const name = document.getElementById('contact-name').value || 'Customer';
+      const email = document.getElementById('contact-email').value || 'Not provided';
+      const phone = document.getElementById('contact-phone').value || 'Not provided';
+      const subject = document.getElementById('contact-subject').value;
+      const message = document.getElementById('contact-message').value;
+
+      if (!message.trim()) {
+        showToast('Please type your message before sending via WhatsApp.', 'error');
+        return;
+      }
+
+      const waText = `Hello Lochana,%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Subject:* ${encodeURIComponent(subject)}%0A%0A*Message:*%0A${encodeURIComponent(message)}%0A%0A(Sent via Techno Mile Store website)`;
+      window.open(`https://wa.me/94719215916?text=${waText}`, '_blank');
+    }
+  </script>
+</body>
+</html>

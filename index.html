@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techno Mile Store | Official eBay Storefront & Curated Lifestyle Catalog</title>
+  <meta name="description" content="Explore top-quality women's fashion bags, travel organizers, beauty tools, and tech essentials from Techno Mile Store. 100% positive feedback eBay seller.">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            ebay: {
+              red: '#e53238',
+              blue: '#0064d2',
+              yellow: '#f5af02',
+              green: '#86b817'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-400 font-semibold px-2 py-0.5 rounded-full text-[11px]">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Verified eBay Seller
+        </span>
+        <span class="text-slate-300 hidden md:inline">100% Positive Feedback | Fast Global Shipping via eBay Hubs</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300">
+        <a href="tel:+94719215916" class="hover:text-white transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-blue-400 text-[10px]"></i> +94 71 921 5916
+        </a>
+        <span class="text-slate-600">|</span>
+        <!-- Currency Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-white font-medium">
+            <i class="fa-solid fa-globe text-slate-400"></i>
+            <span class="current-currency-label">AUD</span>
+            <i class="fa-solid fa-chevron-down text-[9px] text-slate-400"></i>
+          </button>
+          <div class="absolute right-0 mt-1 w-28 bg-white text-slate-800 rounded-xl shadow-xl py-1 hidden group-hover:block z-50 border border-slate-200">
+            <button onclick="setCurrency('AUD')" class="w-full text-left px-3 py-1.5 text-xs hover:bg-blue-50 font-medium flex items-center justify-between">
+              <span>AU$ (AUD)</span>
+            </button>
+            <button onclick="setCurrency('USD')" class="w-full text-left px-3 py-1.5 text-xs hover:bg-blue-50 font-medium flex items-center justify-between">
+              <span>$ (USD)</span>
+            </button>
+            <button onclick="setCurrency('LKR')" class="w-full text-left px-3 py-1.5 text-xs hover:bg-blue-50 font-medium flex items-center justify-between">
+              <span>Rs. (LKR)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MAIN NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-700 flex items-center justify-center text-white shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-store text-xl"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900">Techno<span class="text-blue-600">Mile</span></span>
+              <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded border border-amber-300/50">Store</span>
+            </div>
+            <p class="text-[10px] font-medium text-slate-500 tracking-wide flex items-center gap-1">
+              <span class="text-[#e53238] font-black">e</span><span class="text-[#0064d2] font-black">b</span><span class="text-[#f5af02] font-black">a</span><span class="text-[#86b817] font-black">y</span> Verified Seller
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-semibold text-blue-600 hover:text-blue-700 transition">Home</a>
+          <a href="products.html" class="text-sm font-semibold text-slate-700 hover:text-blue-600 transition">Shop All Items</a>
+          <a href="about.html" class="text-sm font-semibold text-slate-700 hover:text-blue-600 transition">About Us</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-700 hover:text-blue-600 transition">Contact & Owner</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="flex items-center gap-3">
+          <!-- Wishlist Trigger -->
+          <button onclick="openWishlistDrawer()" class="relative p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition" title="Wishlist">
+            <i class="fa-regular fa-heart text-lg"></i>
+            <span class="wishlist-count-badge hidden absolute -top-1.5 -right-1.5 bg-rose-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          </button>
+
+          <!-- Cart Trigger -->
+          <button onclick="openCartDrawer()" class="relative p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition" title="Inquiry Cart">
+            <i class="fa-solid fa-cart-shopping text-lg"></i>
+            <span class="cart-count-badge hidden absolute -top-1.5 -right-1.5 bg-blue-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+          </button>
+
+          <!-- Direct eBay Profile Link Pill -->
+          <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-slate-900 to-slate-800 hover:from-black hover:to-slate-900 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 border border-slate-700">
+            <i class="fa-brands fa-ebay text-xl text-amber-400"></i>
+            <span>eBay Store</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-400"></i>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+            <i class="fa-solid fa-bars text-lg"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-xl">
+      <a href="index.html" class="block py-2 text-sm font-semibold text-blue-600">Home</a>
+      <a href="products.html" class="block py-2 text-sm font-semibold text-slate-700 hover:text-blue-600">Shop All Items</a>
+      <a href="about.html" class="block py-2 text-sm font-semibold text-slate-700 hover:text-blue-600">About Us</a>
+      <a href="contact.html" class="block py-2 text-sm font-semibold text-slate-700 hover:text-blue-600">Contact & Owner</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-slate-900 text-white text-sm font-bold py-2.5 rounded-xl">
+          <i class="fa-brands fa-ebay text-xl text-amber-400"></i>
+          <span>Visit Official eBay Profile</span>
+        </a>
+        <a href="https://wa.me/94719215916?text=Hi%20Lochana,%20I'm%20visiting%20your%20Techno%20Mile%20Store%20website." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-emerald-600 text-white text-sm font-bold py-2.5 rounded-xl">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Direct WhatsApp Chat</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative overflow-hidden hero-gradient py-16 lg:py-24 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-3.5 py-1.5 rounded-full text-xs font-bold text-blue-700">
+            <span class="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
+            Official Web Showcase • Active eBay Store Since 2012
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-slate-900 tracking-tight leading-[1.12]">
+            Discover Premium <span class="text-blue-600">Everyday Gear</span> & Luxury Lifestyle Essentials.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Welcome to <strong class="text-slate-800">Techno Mile Store</strong>, curated by <strong class="text-slate-800">Lochana</strong>. Browse our top-selling women's handbags, beauty tools, car accessories, and home gadgets with 100% eBay buyer protection and reliable global dispatch.
+          </p>
+
+          <!-- Hero CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="products.html" class="inline-flex items-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-7 py-4 rounded-2xl shadow-lg shadow-blue-500/25 hover:shadow-xl transition transform hover:-translate-y-0.5">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span>Explore Products Catalog</span>
+            </a>
+            
+            <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm px-6 py-4 rounded-2xl border-2 border-slate-200 hover:border-slate-300 shadow-sm transition">
+              <i class="fa-brands fa-ebay text-2xl text-blue-600"></i>
+              <span>Shop on Official eBay</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400"></i>
+            </a>
+          </div>
+
+          <!-- Trust Proof Pills -->
+          <div class="pt-6 border-t border-slate-200 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left">
+            <div>
+              <div class="text-2xl font-black text-slate-900 font-heading">100%</div>
+              <div class="text-xs text-slate-500 font-medium">Positive Feedback</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-slate-900 font-heading">12+ Years</div>
+              <div class="text-xs text-slate-500 font-medium">eBay Track Record</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-slate-900 font-heading">Global</div>
+              <div class="text-xs text-slate-500 font-medium">Hub Dispatch</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-slate-900 font-heading">100%</div>
+              <div class="text-xs text-slate-500 font-medium">Money Back Guarantee</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md">
+            
+            <!-- Glow circle background -->
+            <div class="absolute -top-6 -left-6 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-6 -right-6 w-72 h-72 bg-amber-400/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Featured Showcase Card -->
+            <div class="glass-card rounded-3xl p-5 shadow-2xl border border-white/80 relative">
+              <div class="relative rounded-2xl overflow-hidden aspect-square mb-4 bg-slate-100">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80" alt="Embroidered Shoulder Bag" class="w-full h-full object-cover">
+                <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full flex items-center gap-1.5">
+                  <i class="fa-solid fa-star text-amber-400"></i> Top Rated eBay Seller Item
+                </div>
+                <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-blue-600 text-xs font-black px-3 py-1 rounded-full shadow">
+                  AU$ 38.99
+                </div>
+              </div>
+
+              <!-- Founder badge attached to hero -->
+              <div class="bg-white rounded-2xl p-4 shadow-md border border-slate-100 flex items-center gap-3">
+                <img src="assets/images/owner.jpg" alt="Lochana - Store Founder" class="w-12 h-12 rounded-full object-cover border-2 border-blue-500 shadow-sm">
+                <div class="flex-1 min-w-0">
+                  <h4 class="text-xs font-bold text-slate-900 truncate">Lochana • Store Founder</h4>
+                  <p class="text-[11px] text-slate-500">Katugastota, Sri Lanka</p>
+                  <p class="text-[10px] text-emerald-600 font-semibold flex items-center gap-1 mt-0.5">
+                    <i class="fa-solid fa-circle-check"></i> 100% Direct Buyer Support
+                  </p>
+                </div>
+                <a href="contact.html" class="p-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-600 transition" title="Contact Lochana">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Floating Pill 1 -->
+            <div class="hidden sm:flex absolute -left-6 top-1/4 animate-floating glass-card rounded-2xl p-3 shadow-xl border border-white/80 items-center gap-3 z-20">
+              <div class="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-shield-halved text-sm"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-bold text-slate-900">eBay Guarantee</p>
+                <p class="text-[9px] text-slate-500">Money Back Safe Checkout</p>
+              </div>
+            </div>
+
+            <!-- Floating Pill 2 -->
+            <div class="hidden sm:flex absolute -right-6 bottom-16 animate-floating glass-card rounded-2xl p-3 shadow-xl border border-white/80 items-center gap-3 z-20" style="animation-delay: 2s;">
+              <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-plane-departure text-sm"></i>
+              </div>
+              <div>
+                <p class="text-[11px] font-bold text-slate-900">Worldwide Shipping</p>
+                <p class="text-[9px] text-slate-500">Direct From Trusted Hubs</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STORE VALUE HIGHLIGHTS ================= -->
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition">
+          <div class="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center text-xl shrink-0">
+            <i class="fa-brands fa-ebay"></i>
+          </div>
+          <div>
+            <h4 class="font-heading font-bold text-slate-900 text-sm">Official eBay Seller</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Direct links to our verified eBay storefront with 100% positive seller feedback.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-emerald-200 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-shield-heart"></i>
+          </div>
+          <div>
+            <h4 class="font-heading font-bold text-slate-900 text-sm">Buyer Protection</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Full 30-day money back guarantee with safe and encrypted payment gateways.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-amber-200 transition">
+          <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div>
+            <h4 class="font-heading font-bold text-slate-900 text-sm">Tracked Global Shipping</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Fast dispatch from our international logistic partners directly to your door.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:border-purple-200 transition">
+          <div class="w-12 h-12 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-xl shrink-0">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <div>
+            <h4 class="font-heading font-bold text-slate-900 text-sm">Direct Founder Support</h4>
+            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Chat directly with Lochana on WhatsApp or phone for custom requests and questions.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED CATEGORIES ================= -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Curated Collections</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 mt-1">Shop By Category</h2>
+        </div>
+        <a href="products.html" class="text-sm font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 transition">
+          <span>View All Products</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Category 1 -->
+        <a href="products.html?category=fashion" class="group relative rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 aspect-[4/5] flex flex-col justify-end p-6">
+          <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" alt="Fashion & Bags" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-300">5 Items</span>
+            <h3 class="text-xl font-heading font-bold mt-1 group-hover:text-blue-300 transition">Fashion & Bags</h3>
+            <p class="text-xs text-slate-300 mt-1">PU Leather, Crossbody, Duffle, Hats</p>
+          </div>
+        </a>
+
+        <!-- Category 2 -->
+        <a href="products.html?category=beauty" class="group relative rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 aspect-[4/5] flex flex-col justify-end p-6">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Beauty & Personal Care" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-pink-300">3 Items</span>
+            <h3 class="text-xl font-heading font-bold mt-1 group-hover:text-blue-300 transition">Beauty & Care</h3>
+            <p class="text-xs text-slate-300 mt-1">360° Organizers, UV Lamps, Brushes</p>
+          </div>
+        </a>
+
+        <!-- Category 3 -->
+        <a href="products.html?category=car" class="group relative rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 aspect-[4/5] flex flex-col justify-end p-6">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Car & Travel Gear" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-300">2 Items</span>
+            <h3 class="text-xl font-heading font-bold mt-1 group-hover:text-blue-300 transition">Car & Travel</h3>
+            <p class="text-xs text-slate-300 mt-1">Seat Organizers, Memory Foam Pillows</p>
+          </div>
+        </a>
+
+        <!-- Category 4 -->
+        <a href="products.html?category=tech" class="group relative rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 aspect-[4/5] flex flex-col justify-end p-6">
+          <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=800&q=80" alt="Tech & Lifestyle" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+          <div class="relative z-10 text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-cyan-300">2 Items</span>
+            <h3 class="text-xl font-heading font-bold mt-1 group-hover:text-blue-300 transition">Tech & Gadgets</h3>
+            <p class="text-xs text-slate-300 mt-1">Wireless Mounts, Blenders & Essentials</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TOP SELLING EBAY LISTINGS ================= -->
+  <section class="py-16 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-4 mb-10">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-bold border border-amber-200">
+            <i class="fa-solid fa-fire text-amber-500"></i> Top Active eBay Listings
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 mt-2">Featured Products</h2>
+          <p class="text-sm text-slate-500 mt-1">Directly available from Techno Mile Store on eBay with full buyer protection.</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="products.html" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold px-4 py-2.5 rounded-xl transition">
+            <span>Explore All 12 Items</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Featured Grid Container -->
+      <div id="featured-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Rendered by JavaScript dynamically -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= STORE FOUNDER & CONTACT SPOTLIGHT ================= -->
+  <section class="py-16 bg-gradient-to-b from-slate-50 to-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200 relative overflow-hidden">
+        
+        <!-- Decorative background circle -->
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-100/60 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          
+          <!-- Photo of Lochana -->
+          <div class="lg:col-span-4 flex flex-col items-center text-center">
+            <div class="relative">
+              <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-4 ring-blue-500/20">
+                <img src="assets/images/owner.jpg" alt="Lochana - Owner & Founder" class="w-full h-full object-cover">
+              </div>
+              <span class="absolute bottom-2 right-2 bg-emerald-500 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow border-2 border-white flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Online
+              </span>
+            </div>
+            
+            <h3 class="font-heading font-extrabold text-xl text-slate-900 mt-4">Lochana</h3>
+            <p class="text-xs font-bold text-blue-600 uppercase tracking-wider">Founder & Store Operator</p>
+            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+              <i class="fa-solid fa-location-dot text-rose-500"></i> Katugastota, Sri Lanka
+            </p>
+          </div>
+
+          <!-- Bio & Store Info -->
+          <div class="lg:col-span-8 space-y-6">
+            <div>
+              <span class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold border border-blue-200">
+                <i class="fa-solid fa-circle-check text-blue-600"></i> Dedicated Customer Service
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-slate-900 mt-2">
+                "We provide authentic quality items and 100% customer satisfaction."
+              </h2>
+              <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                Thank you for visiting <strong class="text-slate-800">Techno Mile Store</strong>. Since starting on eBay in 2012, my mission has been simple: source high-grade lifestyle essentials, fashionable handbags, and innovative tools, and deliver them seamlessly to customers worldwide with top-rated service.
+              </p>
+            </div>
+
+            <!-- Contact Details Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              
+              <!-- Phone -->
+              <a href="tel:+94719215916" class="p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition group">
+                <div class="w-9 h-9 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold mb-2 group-hover:scale-110 transition">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="text-[11px] text-slate-500 font-medium">Direct Phone / Call</div>
+                <div class="text-xs font-bold text-slate-900 mt-0.5">+94 71 921 5916</div>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:djcj7.lochana@gmail.com" class="p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-blue-50/50 transition group">
+                <div class="w-9 h-9 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm font-bold mb-2 group-hover:scale-110 transition">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="text-[11px] text-slate-500 font-medium">Official Email</div>
+                <div class="text-xs font-bold text-slate-900 mt-0.5 truncate">djcj7.lochana@gmail.com</div>
+              </a>
+
+              <!-- Address -->
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                <div class="w-9 h-9 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-sm font-bold mb-2">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <div class="text-[11px] text-slate-500 font-medium">Registered Address</div>
+                <div class="text-[11px] font-bold text-slate-800 mt-0.5 leading-snug">No 107/03 Bodiraja Mawatha, Katugasthota 20800</div>
+              </div>
+
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="contact.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition">
+                <i class="fa-solid fa-address-card"></i>
+                <span>Open Contact Page</span>
+              </a>
+
+              <a href="https://wa.me/94719215916?text=Hi%20Lochana,%20I%20have%20an%20inquiry%20regarding%20Techno%20Mile%20Store." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>Chat On WhatsApp</span>
+              </a>
+
+              <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-black text-white font-bold text-xs px-6 py-3.5 rounded-xl shadow-md transition">
+                <i class="fa-brands fa-ebay text-lg text-amber-400"></i>
+                <span>View eBay Profile</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EBAY VERIFIED TRUST BANNER ================= -->
+  <section class="py-12 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-blue-900 via-indigo-950 to-slate-900 rounded-3xl p-8 sm:p-10 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+        
+        <div class="space-y-2 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 bg-white/10 text-amber-300 px-3 py-1 rounded-full text-xs font-semibold backdrop-blur">
+            <i class="fa-brands fa-ebay text-lg"></i> Official eBay Storefront
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-heading font-extrabold">Ready to Shop with Complete Confidence?</h3>
+          <p class="text-sm text-slate-300 max-w-xl">
+            All purchases through our eBay store include complete eBay Buyer Protection, tracked international shipping, and 30-day money back guarantee.
+          </p>
+        </div>
+
+        <div class="shrink-0">
+          <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm px-8 py-4 rounded-2xl shadow-xl transition transform hover:scale-105">
+            <span>Visit technomilestore</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-slate-400 pt-16 pb-12 border-t border-slate-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-900">
+        
+        <!-- Col 1: Store Bio -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold text-lg">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <span class="font-heading font-extrabold text-xl text-white">Techno<span class="text-blue-500">Mile</span> Store</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Your trusted global marketplace for curated women's bags, travel organizers, cosmetics storage, and everyday lifestyle gear.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-emerald-400 font-semibold">
+            <i class="fa-solid fa-circle-check"></i> 100% Positive eBay Feedback Seller
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">Quick Navigation</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-white transition">Home Page</a></li>
+            <li><a href="products.html" class="hover:text-white transition">All Products Catalog</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Store & Founder</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Details</a></li>
+            <li><a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-300 font-semibold flex items-center gap-1">eBay Profile <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Product Categories -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">Categories</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="products.html?category=fashion" class="hover:text-white transition">Women's Fashion & Handbags</a></li>
+            <li><a href="products.html?category=beauty" class="hover:text-white transition">Beauty & Makeup Storage</a></li>
+            <li><a href="products.html?category=car" class="hover:text-white transition">Car Backseat & Travel Gear</a></li>
+            <li><a href="products.html?category=tech" class="hover:text-white transition">Tech Gadgets & Home Living</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Location Info -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm mb-4">Contact & Location</h4>
+          <ul class="space-y-3 text-xs">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-user text-blue-400 mt-0.5"></i>
+              <span>Owner: <strong>Lochana</strong></span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-phone text-emerald-400 mt-0.5"></i>
+              <a href="tel:+94719215916" class="hover:text-white transition">+94 71 921 5916</a>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-envelope text-indigo-400 mt-0.5"></i>
+              <a href="mailto:djcj7.lochana@gmail.com" class="hover:text-white transition break-all">djcj7.lochana@gmail.com</a>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-location-dot text-rose-400 mt-0.5"></i>
+              <span>No 107/03 Bodiraja Mawatha, Katugasthota 20800</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>&copy; 2026 Techno Mile Store. Curated by Lochana. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5"><i class="fa-brands fa-ebay text-lg text-slate-400"></i> eBay Storefront</span>
+          <span class="flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-lg text-emerald-400"></i> WhatsApp Support</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= CART SLIDE-OUT DRAWER ================= -->
+  <div id="cart-drawer-backdrop" onclick="closeCartDrawer()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    <!-- Header -->
+    <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <h3 class="font-heading font-bold text-base text-slate-900">Your Inquiry Basket</h3>
+      </div>
+      <button onclick="closeCartDrawer()" class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200 transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Items list -->
+    <div class="flex-1 overflow-y-auto p-5">
+      <div id="cart-drawer-items" class="space-y-3">
+        <!-- Rendered via JS -->
+      </div>
+      <!-- Empty state -->
+      <div id="cart-empty-state" class="hidden text-center py-12">
+        <div class="w-16 h-16 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto text-2xl mb-4">
+          <i class="fa-solid fa-basket-shopping"></i>
+        </div>
+        <h4 class="font-heading font-bold text-slate-800 text-sm">Your basket is empty</h4>
+        <p class="text-xs text-slate-500 mt-1 max-w-xs mx-auto">Browse our collection and add items to checkout via eBay or message directly on WhatsApp.</p>
+        <a href="products.html" onclick="closeCartDrawer()" class="inline-block mt-4 text-xs font-bold text-blue-600 hover:underline">
+          Start Shopping &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="cart-drawer-footer" class="p-5 border-t border-slate-100 bg-slate-50 space-y-4">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-slate-600 font-medium">Estimated Subtotal:</span>
+        <span id="cart-subtotal" class="font-heading font-black text-lg text-slate-900">AU$ 0.00</span>
+      </div>
+
+      <div class="space-y-2">
+        <!-- Direct WhatsApp Inquiry -->
+        <button onclick="checkoutViaWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-3.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Order / Inquire via WhatsApp</span>
+        </button>
+
+        <!-- Direct eBay Store link -->
+        <a href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-black text-white font-bold text-xs py-3 px-4 rounded-xl transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-ebay text-lg text-amber-400"></i>
+          <span>Checkout Directly on eBay</span>
+        </a>
+      </div>
+
+      <p class="text-[10px] text-center text-slate-400">
+        <i class="fa-solid fa-lock"></i> Direct seller confirmation with Lochana via WhatsApp or eBay.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ================= WISHLIST MODAL ================= -->
+  <div id="wishlist-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div onclick="closeWishlistModal()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+    <div class="relative bg-white rounded-3xl shadow-2xl max-w-lg w-full p-6 z-10 max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-heart text-rose-500 text-lg"></i>
+          <h3 class="font-heading font-bold text-base text-slate-900">Saved Wishlist Items</h3>
+        </div>
+        <button onclick="closeWishlistModal()" class="text-slate-400 hover:text-slate-700">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto py-4">
+        <div id="wishlist-items-container" class="space-y-3">
+          <!-- Rendered via JS -->
+        </div>
+        <div id="wishlist-empty-state" class="hidden text-center py-10">
+          <i class="fa-regular fa-heart text-4xl text-slate-300 mb-3"></i>
+          <p class="text-xs text-slate-500 font-medium">You haven't saved any products to your wishlist yet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= QUICK VIEW MODAL ================= -->
+  <div id="quick-view-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <div onclick="closeQuickView()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+    <div class="relative bg-white rounded-3xl shadow-2xl max-w-3xl w-full p-6 sm:p-8 z-10 max-h-[92vh] overflow-y-auto">
+      
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-2">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Images -->
+        <div class="space-y-4">
+          <div class="rounded-2xl overflow-hidden aspect-square bg-slate-100 border border-slate-200">
+            <img id="qv-image" src="" alt="Product View" class="w-full h-full object-cover">
+          </div>
+          <div id="qv-gallery" class="flex gap-2 overflow-x-auto pb-1">
+            <!-- Thumbnails injected via JS -->
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="space-y-4">
+          <div>
+            <span id="qv-category" class="text-[11px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Category</span>
+            <h3 id="qv-title" class="font-heading font-extrabold text-xl text-slate-900 mt-2">Product Title</h3>
+            
+            <div class="flex items-center gap-2 mt-2">
+              <div class="flex items-center text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span id="qv-rating" class="text-xs font-bold text-slate-800">4.9</span>
+              <span id="qv-reviews" class="text-xs text-slate-400">(0 reviews)</span>
+            </div>
+          </div>
+
+          <div class="flex items-baseline gap-3">
+            <span id="qv-price" class="text-2xl font-black font-heading text-blue-600">AU$ 0.00</span>
+            <span id="qv-old-price" class="text-sm text-slate-400 line-through">AU$ 0.00</span>
+          </div>
+
+          <p id="qv-desc" class="text-xs text-slate-600 leading-relaxed"></p>
+
+          <div>
+            <h5 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Key Highlights:</h5>
+            <ul id="qv-features" class="space-y-1.5">
+              <!-- Features injected via JS -->
+            </ul>
+          </div>
+
+          <!-- CTAs -->
+          <div class="space-y-2.5 pt-3 border-t border-slate-100">
+            <div class="grid grid-cols-2 gap-3">
+              <button id="qv-add-cart-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-cart-plus"></i> Add to Basket
+              </button>
+              <a id="qv-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Inquire
+              </a>
+            </div>
+
+            <a id="qv-ebay-btn" href="https://www.ebay.com.au/usr/technomilestore" target="_blank" rel="noopener noreferrer" class="w-full bg-slate-900 hover:bg-black text-white font-bold text-xs py-3 rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-brands fa-ebay text-lg text-amber-400"></i> View Listing on eBay
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Render Featured Products on Home Page
+    function renderFeaturedProducts() {
+      const container = document.getElementById('featured-products-grid');
+      if (!container) return;
+
+      const featured = PRODUCTS_DATA.slice(0, 8); // Top 8 items
+
+      container.innerHTML = featured.map(p => {
+        const isWishlisted = wishlist.includes(p.id);
+        return `
+          <div class="product-card bg-white rounded-3xl overflow-hidden border border-slate-200/90 flex flex-col group">
+            
+            <!-- Image Frame -->
+            <div class="product-img-wrapper aspect-square bg-slate-100 relative">
+              <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+              
+              <!-- Badge -->
+              <span class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                ${p.badge}
+              </span>
+
+              <!-- Wishlist Button -->
+              <button onclick="toggleWishlist('${p.id}')" data-id="${p.id}" class="wishlist-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur text-slate-700 hover:text-rose-500 shadow-md flex items-center justify-center transition">
+                ${isWishlisted ? '<i class="fa-solid fa-heart text-rose-500"></i>' : '<i class="fa-regular fa-heart"></i>'}
+              </button>
+
+              <!-- Quick Action Overlay -->
+              <div class="absolute inset-x-3 bottom-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button onclick="openQuickView('${p.id}')" class="flex-1 bg-white/95 hover:bg-white text-slate-900 font-bold text-xs py-2 rounded-xl shadow-lg transition flex items-center justify-center gap-1.5 backdrop-blur">
+                  <i class="fa-regular fa-eye"></i> Quick View
+                </button>
+                <button onclick="addToCart('${p.id}')" class="w-9 h-9 bg-blue-600 hover:bg-blue-700 text-white rounded-xl shadow-lg transition flex items-center justify-center" title="Add to Basket">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-blue-600">${p.category}</span>
+                <h3 class="font-heading font-bold text-sm text-slate-900 mt-1 line-clamp-2 group-hover:text-blue-600 transition" title="${p.title}">
+                  ${p.title}
+                </h3>
+                
+                <div class="flex items-center gap-1.5 mt-2">
+                  <div class="flex text-amber-400 text-[11px]">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <span class="text-xs font-bold text-slate-800">${p.rating}</span>
+                  <span class="text-[11px] text-slate-400">(${p.reviewsCount})</span>
+                </div>
+              </div>
+
+              <!-- Price & eBay Buy Link -->
+              <div class="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <span class="text-xs text-slate-400 line-through block">${formatPrice(p.oldPriceAUD)}</span>
+                  <span class="text-base font-extrabold font-heading text-slate-900">${formatPrice(p.priceAUD)}</span>
+                </div>
+
+                <a href="${p.ebayUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-500 text-slate-950 font-black text-xs px-3 py-1.5 rounded-xl shadow-sm transition" title="Buy on eBay">
+                  <i class="fa-brands fa-ebay text-base"></i>
+                  <span>eBay</span>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      }).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFeaturedProducts();
+    });
+  </script>
+</body>
+</html>
